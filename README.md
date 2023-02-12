@@ -1,3 +1,4 @@
+This is a Fork of [fauxpilot/fauxpilot](https://github.com/fauxpilot/fauxpilot) with an additional nodejs app added to docker-compose to trick the Copilot.vim (also forked [dragaoazuljr/Copilot.vim](https://github.com/dragaoazuljr/copilot.vim)) authentication system into using FauxPilot.
 
 # FauxPilot
 

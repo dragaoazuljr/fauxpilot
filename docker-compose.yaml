@@ -9,6 +9,7 @@ services:
     volumes:
       - ${MODEL_DIR}:/model
       - ${HF_CACHE_DIR}:/root/.cache/huggingface
+    privileged: true
     ports:
       - "8000:8000"
       - "${TRITON_PORT}:8001"

@@ -34,7 +34,7 @@ done
 # On versions above 20.10.2, docker-compose is docker compose
 smaller=$(printf "$(docker --version | egrep -o '[0-9]+\.[0-9]+\.[0-9]+')\n20.10.2" | sort -V | head -n1)
 if [[ "$smaller" == "20.10.2" ]]; then
-  sudo docker compose up $options --remove-orphans --build
+  docker compose up $options --remove-orphans --build
 else
-  sudo docker-compose up $options --remove-orphans --build
+  docker-compose up $options --remove-orphans --build
 fi;

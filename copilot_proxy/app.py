@@ -51,6 +51,8 @@ def get_copilot_token():
 @app.post("/v1/engines/copilot-codex/completions")
 @app.post("/v1/completions")
 async def completions(data: OpenAIinput):
+    max_tokens = os.environ.get("MAX_TOKEN", data.max_tokens)
+    data.max_tokens = int(max_tokens)
     data = data.dict()
     try:
         content = codegen(data=data)
